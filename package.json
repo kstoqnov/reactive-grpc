@@ -1,0 +1,36 @@
+{
+  "name": "reactive-grpc",
+  "description": "RxJS wrapper for gRPC and TypeScript.",
+  "version": "3.0.1",
+  "files": [
+    "./dist",
+    "./node",
+    "./web"
+  ],
+  "exports": {
+    ".": "./dist/common/index.js",
+    "./node": "./dist/node/index.js",
+    "./web": "./dist/web/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "format": "eslint --fix --fix-type layout .",
+    "lint": "eslint --no-fix .",
+    "build": "tsc",
+    "prepare": "yarn lint && yarn build"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "@types/node": "^14.0.18",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "grpc-web": "^1.2.1",
+    "rxjs": "^6.6.3",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "rxjs": ">=6.0.0 <7.0.0"
+  }
+}
